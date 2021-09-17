@@ -205,6 +205,7 @@
         }
 
         var BuildInOutBoard = function (item, displayNameMap, mailTipsRequestResults, idToken) {
+            console.log('build board');
             var html = "<div class=\"ms-Table\" style=\"border-collapse:collapse;border: 1px solid black;table-layout: auto;width:75%;\;background-color:white;\"><div class=\"ms-Table-row\">";
             html = html + "<span class=\"ms-Table-cell\" style=\"background-color: #EEEEEE;font-size: large;width:50px;font-weight:bolder;\"></span>";
             html = html + "<span class=\"ms-Table-cell\" style=\"background-color: #EEEEEE;font-size: large;width:100px;font-weight:bolder;\">User</span>";
@@ -223,7 +224,6 @@
                             outval = true;
                         }
                     }
-                    html = html + entry
                     if (outval) {
                         html = html + "<div class=\"ms-Table-row\"><span class=\"ms-Table-cell\" style=\"width:50px;\"><img id=\"img" + entry.emailAddress.address + "\" style=\"border: 2px solid red;\" src=\"\" /></span>";
                     } else {
