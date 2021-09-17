@@ -63,6 +63,7 @@
     <script src="https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js"></script>
     <script type="text/javascript">
         // Initialize microsoft teams tab library
+        console.log('Lets get Started');
         microsoftTeams.initialize();
         $('#ProgresLoader').hide();
         var token = null;
@@ -214,6 +215,8 @@
             for (index = 0; index < item.value.length; ++index) {
                 var entry = item.value[index];
                 var DisplayName = displayNameMap[entry.emailAddress.address];
+                console.log('Hello');
+                console.log(entry);
                 if (entry.hasOwnProperty("automaticReplies")) {
                     var outval = false;
                     if (entry.automaticReplies.hasOwnProperty("message")) {
