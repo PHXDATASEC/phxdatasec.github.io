@@ -91,9 +91,12 @@
         var ShowBoard = function () {
             $('#ProgresLoader').show();
             let upn = undefined;
+            console.log('Ok lets do something');
             microsoftTeams.getContext(function (context) {
+                console.log('do we have context');
                 console.log(context);
                 upn = context.upn;
+                console.log('UPD: ' + upn);
                 Authuser(upn);
             });
         }
