@@ -95,6 +95,7 @@
             microsoftTeams.getContext(function (context) {
                 console.log('do we have context');
                 console.log(context);
+                console.log('Set New UPN')
                 upn = context.upn;
                 console.log('UPD: ' + upn);
                 Authuser(upn);
