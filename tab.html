@@ -64,7 +64,6 @@
     <script type="text/javascript">
         // Initialize microsoft teams tab library
         microsoftTeams.initialize();
-        console.log(microsoftTeams);
         $('#ProgresLoader').hide();
         var token = null;
 
@@ -91,13 +90,8 @@
         var ShowBoard = function () {
             $('#ProgresLoader').show();
             let upn = undefined;
-            console.log('Ok lets do something');
             microsoftTeams.getContext(function (context) {
-                console.log('do we have context');
-                console.log(context);
-                console.log('Set New UPN')
                 upn = context.upn;
-                console.log('UPD: ' + upn);
                 Authuser(upn);
             });
         }
@@ -220,10 +214,6 @@
             for (index = 0; index < item.value.length; ++index) {
                 var entry = item.value[index];
                 var DisplayName = displayNameMap[entry.emailAddress.address];
-                console.log('----------------');
-                console.log(entry);
-                console.log(displayName);
-                console.log('----------------');
                 if (entry.hasOwnProperty("automaticReplies")) {
                     var outval = false;
                     if (entry.automaticReplies.hasOwnProperty("message")) {
